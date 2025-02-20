@@ -1,18 +1,116 @@
-@model TModel
+@* @model ProductModel *@
+@* *@
+@* @using (Html.BeginForm()) *@
+@* { *@
+@*     @Html.LabelFor(e=>e.ProductName) *@
+@*     @Html.TextBoxFor(e=>e.ProductName) *@
+@* *@
+@*     @Html.LabelFor(e=>e.ProductPrice) *@
+@*     @Html.TextBoxFor(e=>e.ProductPrice) *@
+@* *@
+@*     @Html.LabelFor(e=>e.Category) *@
+@*     @Html.TextBoxFor(e=>e.Category) *@
+@* *@
+@*     @Html.LabelFor(e=>e.Rating) *@
+@*     @Html.TextBoxFor(e=>e.Rating) *@
+@* *@
+@*     @Html.LabelFor(e=>e.ProductDescription) *@
+@*     @Html.TextAreaFor(e=>e.ProductDescription) *@
+@* *@
+@*     @Html.LabelFor(e=>e.ProductCompany) *@
+@*     @Html.TextBoxFor(e=>e.ProductCompany) *@
+@* } *@
+@* *@
+@* *@
+@* @model ProductModel *@
+@* *@
+@* @using (Html.BeginForm()) *@
+@* { *@
+@* *@
+@* } *@
+@* *@
+@* <div class="border-5 text-black vh-80 w-100 d-flex justify-content-center align-items-center"> *@
+@*     <div class="container bg-light m-5 p-4 rounded"> *@
+@*         <h2><span class="border-bottom border-primary border-3">Product</span> Detail</h2><br><br> *@
+@*         <form class="row g-3"> *@
+@*             <div class="col-md-4"> *@
+@*                 @Html.LabelFor(p => p.ProductName) *@
+@*                 @Html.TextBoxFor(p => p.ProductName, new { @class = "form-control", placeholder = "Product Name" }) *@
+@*             </div> *@
+@*             <div class="col-md-4"> *@
+@*                 @Html.LabelFor(p => p.ProductPrice) *@
+@*                 @Html.TextBoxFor(p => p.ProductPrice, new { @class = "form-control", placeholder = "Product Price" }) *@
+@*             </div> *@
+@*             <div class="col-md-4"> *@
+@*                 @Html.LabelFor(p => p.Rating) *@
+@*                 @Html.TextBoxFor(p => p.Rating, new { @class = "form-control", placeholder = "Product Rating" }) *@
+@*             </div> *@
+@*             <div class="col-md-4"> *@
+@*                 @Html.LabelFor(p => p.ProductCompany) *@
+@*                 @Html.DropDownList("Company", new List<SelectListItem> { *@
+@*                 new SelectListItem {Text="Select Company",Value="-1" }, *@
+@*                 new SelectListItem {Text="Vivo",Value="1" }, *@
+@*                 new SelectListItem {Text="Apple", Value="2" }, *@
+@*                 new SelectListItem {Text="Oppo", Value="2" } *@
+@*                 }, new { @class = "form-label form-select" }) *@
+@*             </div> *@
+@*             <div class="col-md-4"> *@
+@*                 @Html.LabelFor(p => p.ProductDescription) *@
+@*                 @Html.TextBoxFor(p => p.ProductDescription, new { @class = "form-control", placeholder = "Product Description" }) *@
+@* *@
+@*             </div> *@
+@*             <div class="col-md-4"> *@
+@*                 <label for="validationCustom03" class="form-label">Product Category</label><br /> *@
+@*                 <div class="form-check form-check-inline"> *@
+@*                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> *@
+@*                     @Html.LabelFor(p => p.Category, new { @class = "label-control" }) *@
+@*                 </div> *@
+@*                 <div class="form-check form-check-inline"> *@
+@*                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> *@
+@*                     @Html.LabelFor(p => p.Category) *@
+@*                 </div> *@
+@*                 <div class="form-check form-check-inline"> *@
+@*                     <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> *@
+@*                     @Html.LabelFor(p => p.Category) *@
+@*                 </div> *@
+@*             </div>    *@
+@*             <div class="col-md-12"> *@
+@*                 <button type="button" class="btn btn-primary">Submit</button> *@
+@*             </div> *@
+@*         </form> *@
+@*     </div> *@
+@* </div> *@
 
-@{
-    Layout = null;
-}
+@* *@
+@* @model DataTable *@
+@* @using System.Data *@
+@* *@
+@* <table class="table"> *@
+@*     <thead> *@
+@*     <tr> *@
+@*         <th>CityID</th> *@
+@*         <th>CityName</th> *@
+@*         <th>CityCode</th> *@
+@*         <th>StateName</th> *@
+@*         <th>UserName</th> *@
+@*     </tr> *@
+@*     </thead> *@
+@*     <tbody> *@
+@*     @foreach (DataRow dataRow in Model.Rows) *@
+@*     { *@
+@*         <tr> *@
+@*             <td>@dataRow["CityID"]</td> *@
+@*             <td>@dataRow["CityName"]</td> *@
+@*             <td>@dataRow["CityCode"]</td> *@
+@*             <td>@dataRow["StateName"]</td> *@
+@*             <td>@dataRow["UserName"]</td> *@
+@*         </tr> *@
+@*     } *@
+@*     </tbody> *@
+@* </table> *@
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
 <div>
-      
+    <h1>
+        @ViewData["Message"]
+    </h1>
 </div>
-</body>
-</html>

@@ -1,18 +1,14 @@
-@model TModel
+@model UserModel
 
-@{
-    Layout = null;
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(e=>e.email)
+    @Html.TextBoxFor(e=>e.email)
+    
+    @Html.LabelFor(e=>e.password)
+    @Html.TextBoxFor(e=>e.password)
+
+    @Html.LabelFor(e=>e.confirmPassword)
+    @Html.TextBoxFor(e=>e.confirmPassword)
+
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
